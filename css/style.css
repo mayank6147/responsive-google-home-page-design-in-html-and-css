@@ -1,0 +1,204 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:inherit;
+}
+html{
+	font-size:62.5%;
+}
+body{
+	background-color:#fff;
+	box-sizing:border-box;
+	font-family:arial,sans-serif;
+}
+/* style header*/
+.header{
+	font-size:1.5rem;
+	margin-top:2rem;
+	margin-right:2rem;
+}
+.clearflix::after{
+	content:"";
+	clear:both;
+	display:table;
+}
+/* style header lists */
+.header .header__list{
+	float:right;
+	margin-top:.99rem; 
+}
+.header .header__list li {
+	display:inline-block;
+	margin-left:3rem;
+}
+.header .header__list li a {
+	color:#000000;
+	text-decoration:none;
+}
+.header .header__list li a:hover{
+	text-decoration:underline;
+	
+}
+/* style google apps icon*/
+.header .header__list li a span.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+	opacity:0.5;
+}
+.header .header__list li a span.material-icons:hover{
+    border-radius:50rem;
+	
+	background-color:#b8b6b6;
+}
+/* here  using data-* attribute to style discription box in black which  after appeare on hover or focus on app icon */
+.header .header__list li a[data-descr]:hover::after, a[data-descr]:focus::after {
+    content: attr(data-descr);
+    position: absolute;
+	  border-radius:.2rem;
+	 outline: none;
+    top: 6.5rem;
+    right: 11rem;
+    background: black;
+    color: white;
+    padding: .2rem;
+    border: none;
+    opacity: 1;
+    transition: 0.5s opacity;
+}
+/* style google Sing In button*/
+.header .button{
+	float:right;
+	margin-left:3rem;	
+}
+.header .button a.btn-main{
+	display:inline-block;
+	text-decoration:none;
+	color:#fff;
+	text-align:center;
+	border-radius:.4rem ;
+	background-color:1a73e8;
+	font-weight: 500;
+	font-size:1.4rem;
+	padding:1rem;
+	width:9.6rem;
+}
+/* style section */
+.header .button a.btn-main:hover{
+	background-color: #2b7de9;
+	
+}
+/*--> style google logo */
+.logo__search-box{
+	width:100vw;
+	text-align:center;
+	position:relative;
+}
+/*--> style search-box*/
+.logo__search-box .logo__center{
+	margin-top:11rem;
+	margin-bottom:6rem;
+}
+.logo__search-box .search-box{
+  padding:3.5rem;
+  width:inherit;
+  position:absolute;
+  left:50%;
+  right:50%;
+  transform:translate(-50%,-50%);
+}
+/* style input search box*/
+.logo__search-box .search-box input[type=text]{
+	font-size:1.6rem;
+	width:58rem;
+	height:4.8rem;
+	border-radius:5rem;
+	background-image:url(../images/outline_search_mini.png);
+	background-repeat:no-repeat;
+	background-position:2rem 1rem;
+	padding-left:5rem; 
+	padding-top:1.2rem; 
+	padding-bottom: 1.2rem;
+	padding-right:4rem;
+	outline:none;
+	border:.1rem solid #b8b6b6;
+}
+.logo__search-box .search-box input[type=text]:hover{
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	box-shadow:0rem 0rem 1rem  .2rem rgba(0,0,0,.15);
+}
+/* style google two button below search box*/
+.logo__search-box .buttons{
+	margin-top:13rem;
+}
+.logo__search-box .buttons .btn{
+	padding:1rem;
+	background-color: #f8f9fa;
+	border: .1rem solid #f8f9fa;
+	border-radius: .4rem;
+	margin-left:1rem;
+	width: 12.6966rem;
+	outline: none;
+	text-align: center;
+}
+.logo__search-box .buttons .btn:hover{
+		box-shadow:0rem 0rem .3rem  .1rem rgba(0,0,0,.15);
+}
+.logo__search-box .buttons .btn:focus{
+		border: .1rem solid #2b7de9;
+		
+}
+/* style language-links*/
+.logo__search-box .language-links{
+	font-size:1.2rem;
+	margin-top:1.2rem;
+}
+.logo__search-box .language-links a{
+	padding:.5rem;
+}
+/* style footer*/
+.flex_content_center{
+	display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer{
+	width:100%;
+	font-size:1.5rem;
+	color: rgba(0,0,0,.54);
+	position:absolute;
+	bottom:0;
+}
+.footer .footer__block{
+	background-color: #f2f2f2;
+	border-bottom: .1rem solid #dce0e8ba;
+	padding:1.5rem 3rem;
+}
+.footer .footer__block_list {
+	background-color: #f2f2f2;
+	border-bottom: .1rem solid #dce0e8ba;
+	padding-left:1.5rem ;
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+.footer .footer__block_list a{
+	color: rgba(0,0,0,.54);
+	text-decoration:none;
+	padding:1rem;
+}
+.footer .footer__block_list a:hover{
+	color: rgba(0,0,0,.54);
+	text-decoration:underline;
+}
+/* media query for input search box which break on 653px and 451px*/
+@media all and (max-width:653px){
+	.logo__search-box .search-box input[type=text]{
+		width:45rem
+	}
+}
+@media all and (max-width:451px){
+	.logo__search-box .search-box input[type=text]{
+		width:31rem
+	}
+}
+
+
